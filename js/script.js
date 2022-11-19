@@ -60,6 +60,7 @@ document.getElementById('save-btn').addEventListener('click', function () {
         remainingBalance.innerText = remain;
     }
     else{
-        remainingBalance.innerText = "Nothing";
+        savingAmount.innerText = 'You can not save this much!';
+        remainingBalance.innerText = "Can't save Money!";
     }
 })
