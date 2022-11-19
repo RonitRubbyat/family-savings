@@ -36,7 +36,7 @@
                                 <p class="text-end">Income:</p>
                             </div>
                             <div class="col-7">
-                                <input type="text">
+                                <input id="income-input" type="text">
                             </div>
                         </div>
                         <!-- expanses -->
@@ -46,7 +46,7 @@
                                 <p class="text-end">Food:</p>
                             </div>
                             <div class="col-7">
-                                <input type="text">
+                                <input id="food-input" type="text">
                             </div>
                         </div>
                         <div class="row">
@@ -54,7 +54,7 @@
                                 <p class="text-end">Rent:</p>
                             </div>
                             <div class="col-7">
-                                <input type="text">
+                                <input id="rent-input" type="text">
                             </div>
                         </div>
                         <div class="row">
@@ -62,24 +62,26 @@
                                 <p class="text-end">Others:</p>
                             </div>
                             <div class="col-7">
-                                <input type="text">
+                                <input id="others-input" type="text">
                             </div>
                         </div>
+                        <!-- Calculate button -->
                         <div class="d-flex align-items-center justify-content-center my-2">
-                            <button class="btn-border">Calculate</button>
+                            <button id="calc-total" class="btn-border">Calculate</button>
                         </div>
                         <!-- total expanses and balance -->
-                        <h5 class="text-center pt-2 pb-2">Total Expenses: <span>5500</span></h5>
-                        <h5 class="text-center pb-2">Balance: <span>4500</span></h5>
+                        <h5 class="text-center pt-2 pb-2">Total Expenses: <span id="total-expenses">00</span></h5>
+                        <h5 class="text-center pb-2">Balance: <span id="balance">00</span></h5>
                         <!-- saving -->
                         <div class="d-flex align-items-center justify-content-center pb-3">
                             <h6 class="fw-normal me-3">Save:</h6>
                             <input type="text">
                             <h6 class="fw-normal mx-3">%</h6>
+                            <!-- save button -->
                             <button class="btn-border">Save</button>
                         </div>
                         <h5 class="text-center pb-2">Saving Amount: <span>2000</span></h5>
-                        <h5 class="text-center pb-2">Remaining Balance: <span>2500</span></h5>
+                        <h5 class="text-center pb-4">Remaining Balance: <span>2500</span></h5>
                     </div>
                 </div>
             </div>
