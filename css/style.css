@@ -6,3 +6,11 @@
 .money-calc-div{
     background-color: #F8F8F8;
 }
+.btn-border{
+    padding: 10px 40px;
+    color: #fff;
+    background-color: #59A5FF;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+}

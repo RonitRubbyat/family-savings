@@ -18,16 +18,17 @@
 <body>
     <!-- header start -->
     <header>
-        <h3 class="text-center py-3">Family Savings <i class="fa-regular fa-credit-card"></i></h3>
+        <h3 class="text-center my-5">Family Savings <i class="fa-regular fa-credit-card"></i></h3>
     </header>
     <!-- main start -->
     <main>
-        <section class="container">
+        <section class="container my-5">
             <div class="row g-5">
                 <div class="col-lg-6">
                     <img src="images/wallet-dollar-bills-white-table.jpg" alt="..." class="img-fluid">
                 </div>
                 <div class="col-lg-6">
+                    <!-- Income -->
                     <div class="money-calc-div">
                         <h5 class="text-center pt-4 pb-3">Income</h5>
                         <div class="row">
@@ -38,7 +39,8 @@
                                 <input type="text">
                             </div>
                         </div>
-                        <h5 class="text-center py-3">Expenses</h5>
+                        <!-- expanses -->
+                        <h5 class="text-center pt-2 pb-3">Expenses</h5>
                         <div class="row">
                             <div class="col-5">
                                 <p class="text-end">Food:</p>
@@ -63,6 +65,21 @@
                                 <input type="text">
                             </div>
                         </div>
+                        <div class="d-flex align-items-center justify-content-center my-2">
+                            <button class="btn-border">Calculate</button>
+                        </div>
+                        <!-- total expanses and balance -->
+                        <h5 class="text-center pt-2 pb-2">Total Expenses: <span>5500</span></h5>
+                        <h5 class="text-center pb-2">Balance: <span>4500</span></h5>
+                        <!-- saving -->
+                        <div class="d-flex align-items-center justify-content-center pb-3">
+                            <h6 class="fw-normal me-3">Save:</h6>
+                            <input type="text">
+                            <h6 class="fw-normal mx-3">%</h6>
+                            <button class="btn-border">Save</button>
+                        </div>
+                        <h5 class="text-center pb-2">Saving Amount: <span>2000</span></h5>
+                        <h5 class="text-center pb-2">Remaining Balance: <span>2500</span></h5>
                     </div>
                 </div>
             </div>
