@@ -1,3 +1,10 @@
+/* Utilities */
+.star::after{
+    content: '*';
+    color: red; 
+    margin: 0 5px 5px;
+    font-size: 14px;
+}
 /* header style */
 .fa-regular{
     color: royalblue;

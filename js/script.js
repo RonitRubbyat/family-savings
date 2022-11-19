@@ -50,6 +50,15 @@ document.getElementById('save-btn').addEventListener('click', function () {
     const saveTotal = (income * save) / 100;
     const savingAmount = document.getElementById('saving-amount');
     savingAmount.innerText = saveTotal;
-    console.log(saveTotal);
-
+    // remaining balance
+    const balanceText = document.getElementById('balance');
+    const balance = parseFloat(balanceText.innerText);
+    const remainingBalance = document.getElementById('remaining-balance');
+    if(balance >= saveTotal){
+        const remain = balance - saveTotal;
+        remainingBalance.innerText = remain;
+    }
+    else{
+        remainingBalance.innerText = "Nothing";
+    }
 })
