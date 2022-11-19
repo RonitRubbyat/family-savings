@@ -45,6 +45,7 @@ document.getElementById('calc-total').addEventListener('click', function () {
 })
 
 document.getElementById('save-btn').addEventListener('click', function () {
+    // savingAmount
     const save = inputValues('save-input');
     const income = inputValues('income-input');
     const saveTotal = (income * save) / 100;
