@@ -1,19 +1,55 @@
-document.getElementById('calc-total').addEventListener('click', function(){
-    const foodText = document.getElementById('food-input').value;
-    const food = parseFloat(foodText);
-    const rentText = document.getElementById('rent-input').value;
-    const rent = parseFloat(rentText);
-    const othersText = document.getElementById('others-input').value;
-    const others = parseFloat(othersText);
+function inputValues(inputId) {
+    const inputText = document.getElementById(inputId).value;
+    const input = parseFloat(inputText);
+    if (input > 0) {
+        return input;
+    }
+    else {
+        if (inputId == 'food-input') {
+            alert('Please Input Valied Numbers in Food Input');
+        }
+        else if (inputId == 'rent-input') {
+            alert('Please Input Valied Numbers in Rent Input');
+        }
+        else if (inputId == 'others-input') {
+            alert('Please Input Valied Numbers in Others Input');
+        }
+        else if (inputId == 'income-input') {
+            alert('Please Input Valied Numbers in Income Input');
+        }
+        else {
+            alert('Please Input Valied Numbers in Save Input');
+        }
+    }
+}
+
+document.getElementById('calc-total').addEventListener('click', function () {
+    const food = inputValues('food-input');
+    const rent = inputValues('rent-input');
+    const others = inputValues('others-input');
     // total expenses
     const totalAmount = food + rent + others;
     const totalExpenses = document.getElementById('total-expenses');
     totalExpenses.innerText = totalAmount;
     // balance
-    const incomeText = document.getElementById('income-input').value;
-    const income = parseFloat(incomeText);
+    const income = inputValues('income-input');
     const totalBalance = income - totalAmount;
     const balanceText = document.getElementById('balance');
-    balanceText.innerText = totalBalance;
-    // console.log(totalAmount);
+    if (totalBalance > 0) {
+        balanceText.innerText = totalBalance;
+    }
+    else {
+        balanceText.innerText = 'No Balance Left!';
+        totalExpenses.innerText = 'You can not expend that amount!';
+    }
+})
+
+document.getElementById('save-btn').addEventListener('click', function () {
+    const save = inputValues('save-input');
+    const income = inputValues('income-input');
+    const saveTotal = (income * save) / 100;
+    const savingAmount = document.getElementById('saving-amount');
+    savingAmount.innerText = saveTotal;
+    console.log(saveTotal);
+
 })
